@@ -1,0 +1,34 @@
+form {
+    font-size: 1.5em;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-block: .5em;
+}
+
+.parent-task-create-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin: auto;
+}
+
+form textarea {
+    width: 50vw;
+    aspect-ratio: 1.76;
+}
+
+form input, form textarea, form select {
+    font-family: inherit;
+    font-size: .7em;
+}
+
+form button {
+    padding: .5em;
+
+    background-color: var(--success);
+    border-radius: 15px;
+}

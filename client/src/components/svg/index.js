@@ -1,0 +1,10 @@
+export {default as Lion} from './lion.svg';
+export {default as Coin} from './coin.svg';
+export {default as ArrowUp} from './arrow-up.svg';
+export {default as Clock} from './clock.svg';
+export {default as Game} from './game.svg';
+export {default as Gift} from './gift.svg';
+export {default as Investment} from './investment-icon.svg';
+export {default as Stock} from './stock-icon.svg';
+export {default as TaskList} from './task-list.svg';
+export {default as WhiteGame} from './whitegame.svg';

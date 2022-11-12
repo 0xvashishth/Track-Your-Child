@@ -1,0 +1,132 @@
+.parent-task-sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: auto;
+}
+
+.child-selector {
+    margin-block: 1em;
+}
+
+.child-selector h4 {
+    font-size: 1.25em;
+}
+
+.child-selector select {
+    font-family: 'Fredoka One', cursive;
+    background-color: var(--lighttext);
+    border: none;
+    font-size: 1.25em;
+    margin-inline: .75em;
+    width: 9em;
+}
+.child-selector select:hover {
+    cursor: pointer;
+    filter: brightness(0.95);
+}
+
+.task-header {
+    width: 95%;
+}
+
+.task-header button {
+    float: right;
+    padding: .5em;
+
+    border-radius: 10px;
+
+    background-color: var(--success);
+}
+
+.parent-task-card-container {
+    border-radius: 35px;
+    background-color: var(--darkbg);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2em;
+
+    padding-block: 1em;
+    padding-inline: 2.5em;
+
+    max-height: 70vh;
+    overflow: scroll;
+}
+
+.parent-task-card {
+    background-color: var(--main2);
+    width: 60vw;
+    padding: 1.25em;
+    border-radius: 25px;
+    color: var(--lighttext);
+}
+
+.task-time, .task-cost {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: .4em;
+}
+
+.task-footer img {
+    width: 1.5em;
+}
+
+.task-footer span {
+    display: inline-block;
+}
+
+.parent-task-card p {
+    margin-block: 1.5em;
+    margin-inline: 1em;
+    font-size: 1.2em;
+}
+
+.task-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1em;
+}
+
+.task-footer.reward {
+    gap: 2.5em;
+}
+
+.task-footer.reward img{
+    width: 2em;
+}
+
+.task-footer.reward span{
+    font-size: 1.5em;
+}
+
+.parent-task-card.reward h4 {
+    font-size: 1.5em;
+    margin-block: .5em;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 1em;
+    
+    margin-left: auto;
+}
+
+.task-buttons button {
+    padding: .5em;
+    border-radius: 10px;
+}
+
+.task-buttons #edit {
+    background-color: var(--main3);
+}
+
+.task-buttons #delete {
+    background-color: var(--error);
+}
+

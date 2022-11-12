@@ -1,0 +1,134 @@
+.main-container {
+    width: calc(100vw - 3em);
+    height: calc(100vh - 3em);
+
+    padding: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: row;
+
+    margin: auto;
+
+    align-items: center;
+    gap: clamp(50px, 25vw, 150px);
+
+
+    width: fit-content;
+}
+
+.profile {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile img {
+    width: 30%;
+}
+
+.profile-card {
+    background-color: var(--main2);
+    color: var(--lighttext);
+
+    border-radius: 42px;
+    box-shadow: 10px 10px var(--main2-shadow);
+
+    width: 55%;
+    padding: 1.5em;
+    margin-block: 2em;
+
+    display: flex;
+    flex-direction: column;  
+    
+    gap: 1.25em;
+}
+
+a {
+    color: var(--text);
+    width: fit-content;
+
+    transition: color .2s ease-in-out, transform .2s ease-in-out;
+}
+
+a:hover {
+    color: #666;
+    transform: scale(1.05);
+}
+
+.profile-card div {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1em;
+}
+
+.profile-card img {
+    width: 20%;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: fit-content;
+    height: 100%;
+}
+
+.button-container img  {
+    width: 6vw;
+}
+
+.button-container a {
+    width: 100%;
+}
+
+.button-container button {
+    padding-block: 1.5em;
+    border-radius: 25px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    transition: filter .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.button-container button:hover {
+    cursor: pointer;
+    filter: brightness(.9);
+    transform: scale(0.92);
+}
+
+.button-container button#earn {
+    border: var(--main2) solid 10px;
+    color: var(--main2);
+    background-color: var(--sub2);
+}
+
+.button-container button#use {
+    border: var(--main3) solid 10px;
+    color: var(--main3);
+    background-color: var(--sub3);
+}
+
+.button-container button#invest {
+    border: var(--main1) solid 10px;
+    color: var(--main1);
+    background-color: var(--sub1);
+}

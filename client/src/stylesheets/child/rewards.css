@@ -1,0 +1,63 @@
+.rewards-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    padding: 2em;
+
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 2em;
+    row-gap: 3em;
+}
+
+.reward-container {
+    padding: 1.5em;
+    background-color: var(--sub1);
+    border: var(--main1) 8px solid;
+    border-radius: 35px;
+
+    width: clamp(300px, 15vw, 500px);
+    max-width: 300px;
+
+    transition: all .2s ease-in-out;
+}
+
+.reward-container:hover {
+    cursor: pointer;
+    filter: brightness(0.93);
+    transform: scale(0.95);
+}
+
+.reward-footer {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-top: .5em;
+    width: 75%;
+    justify-content: space-between;
+}
+
+.reward-footer > div {
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
+}
+
+.reward-footer > div > img {
+    width: 2.2em;
+    display: inline-block;
+}
+
+.reward-container h4 {
+    display: inline-block;
+}
+
+.reward-container h4#content {
+    display: block;
+}
+
+.reward-container img {
+    width: 2.2em;
+    display: inline-block;
+}

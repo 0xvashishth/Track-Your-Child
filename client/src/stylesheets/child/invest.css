@@ -1,0 +1,126 @@
+.invest-sub-container {
+    display: flex;
+    flex-direction: row;
+
+    margin-block: auto;
+    margin-inline: auto;
+}
+
+.companies {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-inline: 2em;
+}
+
+.companies svg {
+    font-size: 2.5em;
+}
+
+.companies ul {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--darkbg);
+    border-radius: 35px;
+
+    padding: 2em;
+
+    gap: 1em;
+
+    width: 90%;
+    max-height: 50vh;
+    overflow: scroll;
+}
+
+.companies li {
+    background-color: var(--sub2);
+    padding: 1em;
+    padding-inline: 3em;
+    border-radius: 25px;
+    border: var(--main2) 8px solid;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    box-sizing: border-box;
+    /* max-width: max-content; */
+    height: fit-content;
+}
+
+.companies h4.positive {
+    color: var(--success);
+}
+
+.companies h4.negative {
+    color: var(--error);
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 40vw;
+}
+
+.graph {
+    width: 90%;
+    aspect-ratio: 1.76;
+    background-color: var(--darkbg);
+
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
+
+.company-bio {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+    width: 85%;
+    margin: 0;
+    padding: 0;
+}
+
+.company-bio h4 {
+    font-size: 1.5em;
+    display: block;
+}
+
+.invest-buttons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    margin: auto;
+}
+
+.invest-buttons button {
+    padding-inline: .5em;
+    border-radius: 25px;
+}
+
+.invest-buttons button{
+    padding-inline: .5em;
+    border-radius: 25px;
+}
+
+.invest-buttons button h4 {
+    font-size: 1.5em;
+}
+
+.invest-buttons button#buy {
+    background-color: var(--sub_success);
+    border: var(--success) 6px solid;
+}
+
+.invest-buttons #sell {
+    background-color: var(--sub_error);
+    border: var(--error) 6px solid;
+}

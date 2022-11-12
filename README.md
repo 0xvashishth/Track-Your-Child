@@ -1,0 +1,1 @@
+- This project is all about tracking child activities and give them rewards on basis of their work.

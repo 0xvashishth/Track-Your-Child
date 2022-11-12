@@ -24,7 +24,7 @@ class Home extends Component {
         const child = this.state.child
         return (
             <div className="main-container">
-                <Link to='/'><h4 className="title">EduCoin</h4></Link>
+                <Link to='/'><h4 className="title">TrackYourChild</h4></Link>
                 <div className="sub-container">
                     <div className="profile">
                         <img src={Lion} />

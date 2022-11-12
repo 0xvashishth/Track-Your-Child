@@ -107,7 +107,7 @@ class Invest extends Component {
 
         return (
             <div className="main-container">
-                <Link to='/'><h4 className="title">EduCoin</h4></Link>
+                <Link to='/'><h4 className="title">TrackYourChild</h4></Link>
                 <div className="stat">
                     <img src={Coin} />
                     <h4>500</h4>

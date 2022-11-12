@@ -60,7 +60,7 @@ class ParentHome extends Component {
         return (
             <div className="parent-main-container">
                 <div className="navbar">
-                    <h4 className="title">EduCoin</h4>
+                    <h4 className="title">TrackYourChild</h4>
                     <ul className="tabs">
                         <Link to="/parent">
                             <li>Children</li>
@@ -73,9 +73,9 @@ class ParentHome extends Component {
                         </Link>
                     </ul>
                     <div className="navbar-footer">
-                        Copyright © 2020
+                        Copyright © 2022
                         <br />
-                        TAMU Hack
+                        TrackYourChild
                     </div>
                 </div>
 

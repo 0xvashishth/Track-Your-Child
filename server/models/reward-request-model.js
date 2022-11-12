@@ -1,12 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const Reward = new Schema(
+const RewardRequest = new Schema(
     {
-        name: { type: String, required: true },
-        coins: { type: Number, required: true },
-        category: { type: String },
-    }
+        reward: { type: Schema.Types.ObjectId, required: true },
+        child: { type: Schema.Types.ObjectId, required: true },
+        status: { type: String, required: true }
+    },
+    { timestamps: true },
 )
 
-module.exports = mongoose.model('reward', Reward)
+module.exports = mongoose.model('reward-request', RewardRequest)

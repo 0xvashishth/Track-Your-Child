@@ -1,14 +1,5 @@
 import "../../stylesheets/parent/create_task.css";
-import {
-    ArrowUp,
-    Coin,
-    Lion,
-    Stock,
-    TaskList,
-    Gift,
-    Investment,
-    Clock,
-} from "../svg";
+
 import apis from "../../api";
 import { Link } from "react-router-dom";
 

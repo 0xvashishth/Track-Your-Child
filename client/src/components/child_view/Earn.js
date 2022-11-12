@@ -1,5 +1,5 @@
 import '../../stylesheets/child/earn.css'
-import { ArrowUp, Coin, Lion, Stock, TaskList, Gift, Investment } from "../svg"
+import { Coin,Stock } from "../svg"
 import apis from '../../api'
 import { Link } from 'react-router-dom'
 
@@ -26,13 +26,13 @@ class Earn extends Component {
         const pending = []
         const completed = []
         tasks.forEach(task => {
-            if (task.status == "assigned") {
+            if (task.status === "assigned") {
                 to_do.push(<li>{task.name}-{task.coins}</li>)
             }
-            else if (task.status == "completed") {
+            else if (task.status === "completed") {
                 pending.push(<li>{task.name}-{task.coins}</li>)
             }
-            else if (task.status == "accepted") {
+            else if (task.status === "accepted") {
                 completed.push(<li>{task.name}-{task.coins}</li>)
             }
         })
@@ -40,8 +40,8 @@ class Earn extends Component {
         <div className="main-container">
             <Link to='/'><h4 className="title">TrackYourChild</h4></Link>
             <div className='stat'>
-                <img src={Coin}/><h4>500</h4>
-                <img src={Stock}/><h4>+50</h4>
+                <img alt="img" src={Coin}/><h4>500</h4>
+                <img alt="img" src={Stock}/><h4>+50</h4>
             </div>
             <h3 style={{color: 'var(--main2)'}}>Earn Coins</h3>
             <div className='lists-sub-container'>

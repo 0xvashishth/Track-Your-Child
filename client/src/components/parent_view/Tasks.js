@@ -1,12 +1,6 @@
 import "../../stylesheets/parent/tasks.css";
 import {
-    ArrowUp,
     Coin,
-    Lion,
-    Stock,
-    TaskList,
-    Gift,
-    Investment,
     Clock,
 } from "../svg";
 import { Link } from "react-router-dom";
@@ -57,11 +51,11 @@ class ParentTasks extends Component {
 
                     <div className="task-footer">
                         <div className="task-time">
-                            <img src={Clock} />
+                            <img alt="img" src={Clock} />
                             <span>5pm</span>
                         </div>
                         <div className="task-cost">
-                            <img src={Coin} />
+                            <img alt="img" src={Coin} />
                             <span>{task.coins}</span>
                         </div>
                         <div className="task-buttons">
@@ -72,7 +66,7 @@ class ParentTasks extends Component {
                                     if (
                                         window.confirm(
                                             `Delete ${task.name}?`
-                                        ) == true
+                                        ) === true
                                     ) {
                                         await apis.deleteTaskById(task._id);
                                         this.getTasks();

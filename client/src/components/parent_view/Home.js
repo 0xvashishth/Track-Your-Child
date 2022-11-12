@@ -1,5 +1,5 @@
 import "../../stylesheets/parent/home.css";
-import { ArrowUp, Coin, Lion, Stock, TaskList, Gift, Investment } from "../svg";
+import { Coin, Lion } from "../svg";
 import { Link } from "react-router-dom";
 import apis from "../../api";
 
@@ -34,9 +34,9 @@ class ParentHome extends Component {
             childrenArr.push(
                 <div className="child-card">
                     <h4>{child.name}</h4>
-                    <img src={Lion} />
+                    <img alt="img" src={Lion} />
                     <div className="child-coin">
-                        <img src={Coin} />
+                        <img alt="img" src={Coin} />
                         <span>Coins: {child.coins}</span>
                     </div>
                     <div className="child-buttons">
@@ -44,7 +44,7 @@ class ParentHome extends Component {
                         <button
                             id="delete"
                             onClick={async () => {
-                                if (window.confirm(`Delete ${child.name}?`) == true) {
+                                if (window.confirm(`Delete ${child.name}?`) === true) {
                                     await apis.deleteChildById(child._id);
                                     this.getChildren();
                                 }

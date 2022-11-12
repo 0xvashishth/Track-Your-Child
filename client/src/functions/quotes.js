@@ -30,6 +30,8 @@ function quotes(company) {
             return 846.35
         case "NFLX":
             return 384.36
+        default:
+                return 0
     }
 }
 

@@ -1,12 +1,6 @@
 import "../../stylesheets/parent/create_task.css";
 import {
-    ArrowUp,
     Coin,
-    Lion,
-    Stock,
-    TaskList,
-    Gift,
-    Investment,
     Clock,
 } from "../svg";
 import apis from "../../api";
@@ -49,11 +43,11 @@ class ParentTasksCreate extends Component {
                     </p>
                     <div className="task-footer">
                         <div className="task-time">
-                            <img src={Clock} />
+                            <img alt="img" src={Clock} />
                             <span>5pm</span>
                         </div>
                         <div className="task-cost">
-                            <img src={Coin} />
+                            <img  alt= "img" rc={Coin} />
                             <span>500</span>
                         </div>
                         <div className="task-buttons">

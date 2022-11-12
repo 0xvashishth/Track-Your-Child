@@ -1,13 +1,6 @@
 import "../../stylesheets/parent/tasks.css";
 import {
-    ArrowUp,
     Coin,
-    Lion,
-    Stock,
-    TaskList,
-    Gift,
-    Investment,
-    Clock,
     WhiteGame,
 } from "../svg";
 import { Link } from "react-router-dom";
@@ -46,10 +39,10 @@ class ParentRewards extends Component {
                     <h4>{rewards[i].name}</h4>
                     <div className="task-footer reward">
                         <div className="task-time">
-                            <img src={WhiteGame} />
+                            <img alt="img" src={WhiteGame} />
                         </div>
                         <div className="task-cost">
-                            <img src={Coin} />
+                            <img alt="img" src={Coin} />
                             <span>{rewards[i].coins}</span>
                         </div>
                         <div className="task-buttons">
@@ -60,7 +53,7 @@ class ParentRewards extends Component {
                                     if (
                                         window.confirm(
                                             `Delete ${rewards[i].name}?`
-                                        ) == true
+                                        ) === true
                                     ) {
                                         await apis.deleteRewardById(rewards[i]._id);
                                         this.getRewards();

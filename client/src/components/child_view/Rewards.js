@@ -1,13 +1,8 @@
 import "../../stylesheets/child/rewards.css";
 import {
-    ArrowUp,
     Coin,
-    Lion,
     Stock,
-    TaskList,
-    Gift,
-    Investment,
-    Game,
+    Game
 } from "../svg";
 import apis from '../../api'
 import { Link } from 'react-router-dom'
@@ -62,9 +57,9 @@ class Rewards extends Component {
                 <div key={i} className="reward-container" onClick={() => this.handleRewardClick(rewards[i].coins)}>
                     <h4 id={"content"}>{rewards[i].name}</h4>
                     <div className="reward-footer">
-                        <img src={Game} />
+                        <img alt="img" src={Game} />
                         <div>
-                            <img src={Coin} />
+                            <img alt="img" src={Coin} />
                             <h4>{rewards[i].coins}</h4>
                         </div>
                     </div>
@@ -76,9 +71,9 @@ class Rewards extends Component {
             <div className="main-container">
                 <Link to='/'><h4 className="title">TrackYourChild</h4></Link>
                 <div className="stat">
-                    <img src={Coin} />
+                    <img alt="img" src={Coin} />
                     <h4>{child.coins}</h4>
-                    <img src={Stock} />
+                    <img alt="img" src={Stock} />
                     <h4>+50</h4>
                 </div>
                 <h3 style={{ color: "var(--main3)" }}>Use Coins</h3>

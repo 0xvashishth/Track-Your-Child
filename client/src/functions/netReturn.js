@@ -35,6 +35,8 @@ function netReturn(company) {
             return 846.35 - 829.1
         case "NFLX":
             return 384.36 - 386.7
+        default:
+            return 0;
     }
 
 }

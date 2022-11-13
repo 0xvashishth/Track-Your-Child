@@ -29,7 +29,7 @@ class Rewards extends Component {
                   .catch((err) => console.log(err))
     }
 
-    handleRewardClick = async (rewardscoins) => {
+    handleRewardClick = async (rewardscoins,rname) => {
         // event.preventDefault()
         this.state.child.coins -= rewardscoins;
         this.setState(prevState => {
@@ -38,7 +38,7 @@ class Rewards extends Component {
             return { uhhh };                                 
           })
         // this.setState({...this.state.child, this.state.child.coins -= rewardscoins});
-        const p = {id:this.state.child._id, coins:-rewardscoins}
+        const p = {id:this.state.child._id, coins:-rewardscoins, rname:rname}
         console.log('dKLADLAMLK',p)
         await apis.updateChildCoins(p)
             .then((res) => console.log(res))
@@ -54,7 +54,7 @@ class Rewards extends Component {
 
         for (let i = 0; i < rewards.length; ++i) {
             stuff.push(
-                <div key={i} className="reward-container" onClick={() => this.handleRewardClick(rewards[i].coins)}>
+                <div key={i} className="reward-container" onClick={() => this.handleRewardClick(rewards[i].coins, rewards[i].name)}>
                     <h4 id={"content"}>{rewards[i].name}</h4>
                     <div className="reward-footer">
                         <img alt="img" src={Game} />

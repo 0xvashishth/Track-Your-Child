@@ -1,8 +1,12 @@
 const Task = require('../models/task-model')
+  const sgMail = require('@sendgrid/mail')
+require('dotenv').config()
+const apikey = process.env['SENDGRID_API_KEY']
+const template_id_completed = process.env['template_id_completed']
 
 createTask = (req, res) => {
     const body = req.body
-
+    console.log("Create request accept");
     if (!body) {
         return res.status(400).json({
             success: false,
@@ -114,15 +118,18 @@ getTaskById = async (req, res) => {
 
 
 updateTaskStatus = async (req, res) => {
+  
+  
     const body = req.body
-
+    console.log("update body");
     if (!body) {
         return res.status(400).json({
             success: false,
             error: 'You must provide a body to update',
         })
     }
-
+  
+    var AssignchildTask = ""
     Task.findOne({ _id: req.params.id }, (err, task) => {
         if (err) {
             return res.status(404).json({
@@ -133,12 +140,35 @@ updateTaskStatus = async (req, res) => {
 
         if (req.params.action == "accept") {
             task.status = "accepted"
+            AssignchildTask = task.child;
+            
         }
         else if (req.params.action == "decline") {
             task.status = "declined"
         }
         else if (req.params.action == "complete") {
             task.status = "completed"
+          sgMail.setApiKey(apikey)
+           const msg = {
+                  from: "admin@trackyourchild.co",
+                  template_id: template_id_completed,
+                  personalizations: [{
+                      to: { email: "vasutemporarylc@gmail.com" },
+                      dynamic_template_data: {
+                          child_name: "joy",
+                          child_task: task.name,
+                      },
+                  }],
+                  
+                };
+            sgMail
+              .send(msg)
+              .then(() => {
+                console.log('Email sent')
+              })
+              .catch((error) => {
+                console.error(error)
+              })
         }
         
         task

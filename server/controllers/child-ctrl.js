@@ -1,4 +1,8 @@
 const Child = require('../models/child-model')
+  const sgMail = require('@sendgrid/mail')
+require('dotenv').config()
+const apikey = process.env['SENDGRID_API_KEY']
+const template_id_reward = process.env['template_id_reward']
 
 createChild = (req, res) => {
     const body = req.body
@@ -53,6 +57,29 @@ updateChildCoins = (req, res) => {
         }
 
         child.coins += body["coins"]
+
+      sgMail.setApiKey(apikey)
+           const msg = {
+                  from: "admin@trackyourchild.co",
+                  template_id: template_id_reward,
+                  personalizations: [{
+                      to: { email: "vasutemporarylc@gmail.com" },
+                      dynamic_template_data: {
+                          child_name: "joy",
+                          reward_name: body["rname"],
+                      },
+                  }],
+                  
+                };
+            sgMail
+              .send(msg)
+              .then(() => {
+                console.log('Email sent')
+              })
+              .catch((error) => {
+                console.error(error)
+              })
+      
         
         child
             .save()

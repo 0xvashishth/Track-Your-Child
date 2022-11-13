@@ -1,5 +1,5 @@
 # Inspiration 😎
-## ## What it does ⚙️
+## What it does ⚙️
 - A financial website to teach your kids about money management! Give them assignments (chores) to finish in exchange for money. Once they have accumulated enough coins, they can use them to purchase stocks as well as rewards!
 
 - No actual money will be wasted in this market, so don't worry! We built a completely virtual stock market so that the kids could learn and practice investing wisely. It's usually a good idea to start them young, as some people assert.

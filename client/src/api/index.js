@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'http://localhost:3001/api',
+    baseURL: 'https://track-your-child.vashishth-patel.repl.co/api',
 })
 
 export const insertChild = payload => api.post(`/child`, payload)

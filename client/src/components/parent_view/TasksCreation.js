@@ -23,7 +23,7 @@ class ParentTasksCreate extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3001/api/children")
+        fetch("https://track-your-child.vashishth-patel.repl.co/api/children")
             .then((res) => res.json())
             .then((res) => {
                 this.setState({ children: res.data, child: res.data[0]._id });

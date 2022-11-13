@@ -39,7 +39,7 @@ class Invest extends Component {
         const getStocks = await apis.getStocks()
         this.setState({stocks: getStocks.data.data, current_stock: getStocks.data.data[0]})
         
-        const getShares = await apis.getShares("61f621d3bf24162200bfb993", "GOOGL")  
+        const getShares = await apis.getShares("636f37e2484eeae6e3b92bd1", "GOOGL")  
         this.setState({current_shares: getShares.data.data.shares})
         console.log(this.state.current_shares)
     }

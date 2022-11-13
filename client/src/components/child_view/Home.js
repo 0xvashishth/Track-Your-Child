@@ -14,7 +14,7 @@ class Home extends Component {
     }
 
     componentDidMount = async () => {
-        await apis.getChildById("61f621d3bf24162200bfb993")
+        await apis.getChildById("636f37e2484eeae6e3b92bd1")
                   .then((res) => this.setState({child: res.data.data}))
                   .catch((err) => console.log(err))
     }

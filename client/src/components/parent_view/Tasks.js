@@ -24,7 +24,7 @@ class ParentTasks extends Component {
     }
 
     getChildren() {
-        fetch("http://localhost:3001/api/children")
+        fetch("https://track-your-child.vashishth-patel.repl.co/api/children")
             .then((res) => res.json())
             .then((res) => {
                 this.setState({ children: res.data, selectedChild: res.data[0]._id });

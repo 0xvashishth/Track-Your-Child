@@ -9,18 +9,24 @@ class Earn extends Component {
     constructor() {
         super();
         this.state = {
-            tasks: []
+            tasks: [],
+            child: {}
         }
     }
 
     componentDidMount = async () => {
-        await apis.getChildTasks("61f621d3bf24162200bfb993")
+        await apis.getChildTasks("636f37e2484eeae6e3b92bd1")
                 .then((res) => this.setState({tasks: res.data.data}))
+                .catch((err) => console.log(err));
+
+        await apis.getChildById("636f37e2484eeae6e3b92bd1")
+                .then((res) => this.setState({child: res.data.data}))
                 .catch((err) => console.log(err))
     }
 
 
     render() {
+        const child = this.state.child
         const tasks = this.state.tasks
         const to_do = []
         const pending = []
@@ -40,7 +46,7 @@ class Earn extends Component {
         <div className="main-container">
             <Link to='/'><h4 className="title">TrackYourChild</h4></Link>
             <div className='stat'>
-                <img alt="img" src={Coin}/><h4>500</h4>
+                <img alt="img" src={Coin}/><h4>{child.coins}</h4>
                 <img alt="img" src={Stock}/><h4>+50</h4>
             </div>
             <h3 style={{color: 'var(--main2)'}}>Earn Coins</h3>

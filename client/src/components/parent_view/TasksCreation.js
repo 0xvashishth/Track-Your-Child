@@ -79,8 +79,12 @@ class ParentTasksCreate extends Component {
             picked["coins"] = Number(picked["coins"]);
             console.log(picked);
             apis.insertTask(picked)
-                .then((window.location = "/parent/tasks"))
+                .then(() => {
+                    window.alert("Task Added")
+                    window.location = "/parent/tasks";
+                })
                 .catch((err) => console.log(err));
+            console.log("added");
         };
         const selectOptions = [];
         const { children } = this.state;

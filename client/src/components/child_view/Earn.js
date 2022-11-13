@@ -33,7 +33,18 @@ class Earn extends Component {
         const completed = []
         tasks.forEach(task => {
             if (task.status === "assigned") {
-                to_do.push(<li>{task.name}-{task.coins}</li>)
+                to_do.push(<div><li>{task.name}-{task.coins}</li><button id="edit"
+                onClick={async () => {
+                    if (
+                        window.confirm(
+                            `Do you want to make is completed? ${task.name}?`
+                        ) === true
+                    ) {
+                        await apis.updateTaskStatus(task._id, "complete");
+                        this.getTasks();
+                    }
+                }}
+            >Mark As Completed</button></div>)
             }
             else if (task.status === "completed") {
                 pending.push(<li>{task.name}-{task.coins}</li>)
@@ -61,8 +72,10 @@ class Earn extends Component {
                     <h4>Tasks Completed</h4>
                     <ul>
                         {/* probably style differently */}
+                        Pending to accept!
                         {pending}
                         <li>-----</li>
+                        Accepted!
                         {completed}
                     </ul>
                 </div>

@@ -14,6 +14,9 @@ export const insertReward = payload => api.post('/reward', payload)
 export const getAllTask = () => api.get('/tasks')
 export const getAllRewards = () => api.get('/rewards')
 export const deleteTaskById = id => api.delete(`/task/${id}`)
+
+export const updateTaskStatus = (id, action) => api.put(`/task/${id}/${action}`)
+
 export const deleteRewardById = id => api.delete(`/reward/${id}`)
 
 export const getChildTasks = child => api.get(`/tasks/${child}`)
@@ -43,7 +46,8 @@ const apis = {
     getChildTasks,
     deleteTask,
     getStocks,
-    getShares
+    getShares,
+    updateTaskStatus
 }
 
 export default apis

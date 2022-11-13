@@ -59,7 +59,20 @@ class ParentTasks extends Component {
                             <span>{task.coins}</span>
                         </div>
                         <div className="task-buttons">
-                            <button id="edit">Edit</button>
+                            <button id="edit"
+                                onClick={async () => {
+                                    if (
+                                        window.confirm(
+                                            `Do you want to make is completed? ${task.name}?`
+                                        ) === true
+                                    ) {
+                                        await apis.updateTaskStatus(task._id, "accept");
+                                        this.getTasks();
+                                        const p = {id:selectedChild, coins:task.coins}
+                                        await apis.updateChildCoins(p).then(window.alert("updated status")).then(window.location="/parent/tasks")
+                                    }
+                                }}
+                            >Completed</button>
                             <button
                                 id="delete"
                                 onClick={async () => {
